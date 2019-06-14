@@ -1,0 +1,23 @@
+<html>
+  <head></head>
+  <body>
+    <h1>Movies</h1><br>
+    <span>search</span>
+    <input type="text" placeholder="search Movies" (input)="addTitle($event)" />
+   <button (click)="search($event)">Go</button>
+   
+    <br>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Rating</th>
+      </tr>
+      <tr *ngFor="let film of movie">
+          <td>{{ film.title }}</td>
+          <td>{{ film.rating }}</td>
+          <!-- <td></td> -->
+        </tr>
+
+    </table>
+  </body>
+</html>
